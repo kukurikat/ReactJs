@@ -1,35 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import List from "./List";
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const fruits = [
+    { name: "banana", callories: 100 },
+    { name: "apple", callories: 200 },
+    { name: "orange", callories: 300 },
+  ];
+  const vegetables = [
+    { name: "carrot", callories: 50 },
+    { name: "broccoli", callories: 70 },
+    { name: "spinach", callories: 30 },
+  ];
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <List listtoget={fruits} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
