@@ -12,9 +12,14 @@ function Timer() {
     };
   }, []);
 
+  function PadZero(num) {
+    return (num < 10 ? "0" : "") + num;
+  }
+
   return (
     <>
-      {time.getHours()}:{time.getMinutes()}:{time.getSeconds()}
+      {PadZero(time.getHours())}:{PadZero(time.getMinutes())}:
+      {PadZero(time.getSeconds())}
     </>
   );
 }
